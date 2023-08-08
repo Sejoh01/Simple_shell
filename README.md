@@ -93,17 +93,33 @@ write (man 2 write)
 
 
 # files
-- README.md - description about the project repo
-- man_1_simple_shell - is the man page for the shell we are going to write.
-- AUTHORS - file at the  root of your repository, listing all individuals having contributed content to the repository. 
-- main.h - is the header file which contains the standared header file and prototype of o function used in the program.
-- main.c - initialize the program with infinite loop by call the prompt function
-- prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
-- special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
-- string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
-- cmd.c - it finds the command the user entered.
-- execute.c - execute the command.
-
+README.md - description about the project repo
+AUTHORS - file at the  root of your repository, listing all individuals having contributed content to the repository. 
+main_shell.c: The main entry point of the shell program.
+shell_header.h: Header file containing function prototypes and macros.
+shell_main_loop.c: Implements the main loop of the shell, where user input is processed.
+handle_builtin_commands.c: Handles built-in shell commands like "cd," "exit," etc.
+buffer_chained_commands.c: Deals with managing and processing chained commands.
+retrieve_history_files.c: Manages the history of executed commands.
+parse_input.c: Parses user input into separate commands and arguments.
+manage_variables.c: Manages environment variables and their values.
+display_history_list.c: Displays the list of command history.
+convert_to_integer.c: Converts strings to integers (utility function).
+string_operations.c: Provides utility functions for string manipulation.
+string_utilities.c: Contains additional string utility functions.
+print_error_message.c: Prints error messages and handles error reporting.
+print_environment.c: Displays the current environment variables.
+initialize_info_struct.c: Initializes data structures and information needed by the shell.
+linked_lists.c: Handles various linked list operations.
+create_linked_list.c: Creates linked list data structures.
+copy_string.c: Copies strings (utility function).
+custom_realloc.c: Implements a custom memory reallocation function.
+create_tokenizer.c: Tokenizes input strings.
+manage_memory.c: Manages memory allocation and deallocation.
+simple_shell_manual_page: Contains the manual or help page for the simple shell.
+string_to_integer.c: Converts strings to integers (utility function).
+handle_signals.c: Handles signals and interrupts in the shell.
+ 
 ## How to add Author file
 `Bash script for generating the list of authors in git repo`
 ```
